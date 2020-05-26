@@ -71,7 +71,7 @@ typedef struct{
 	uint8_t DLFP;
 	uint8_t TEMP_DIS;
 	uint8_t SMPRT;
-}MPU_Config;
+}MPU_Config_Struct;
 
 enum CLKSOURCE{
 	INT_8MHz=0x0,
@@ -120,7 +120,7 @@ enum DLPF_Configuration{
 void Write(uint8_t Data,uint8_t Address);
 void Read(uint8_t *Dataptr,uint8_t Address,uint16_t NoOfBytes);
 void MPU_6050_Initialize(I2C_HandleTypeDef *i2c);
-void MPU6050_Config(MPU_Config *Config);
+void MPU6050_Config(MPU_Config_Struct *Config);
 void MPU6050_Get_Accel_Data(Data *accel);
 void MPU6050_Get_Gyro_Data(Data *gyro);
 void MPU6050_Get_Temp(uint16_t* ptr);
