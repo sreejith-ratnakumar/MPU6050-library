@@ -80,7 +80,7 @@ void MPU_6050_Initialize(I2C_HandleTypeDef *i2c)
   * @param  Config: structure that hasthe configurations to be applied
   * @retval No return
   */
-void MPU6050_Config(MPU_Config *Config)
+void MPU6050_Config(MPU_Config_Struct *Config)
 {
 	Write(0x80,PWR_MGMT_1);
 	HAL_Delay(100);
